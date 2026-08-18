@@ -16,7 +16,7 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`http://localhost:5000/api/v1/vibe-check?subreddit=${encodeURIComponent(sub)}`);
+      const res = await fetch(`https://subreddit-vibe-check-pjz3.onrender.com/api/v1/vibe-check?subreddit=${encodeURIComponent(sub)}`);
       const json = await res.json();
 
       if (!res.ok) throw new Error(json.error || 'Failed to fetch data');
